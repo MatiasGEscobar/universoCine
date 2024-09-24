@@ -1,0 +1,19 @@
+header{
+    padding: 1em;
+    background-color: #5D0C1D;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.headerTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #CCB38D;
+    border-color: #9A825F;
+}
