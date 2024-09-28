@@ -35,16 +35,11 @@ body{
     font-size: 15px;
     padding: 3px;
     text-decoration: none;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
     border-radius: 100px;
-    -webkit-box-shadow: 0px 1px 3px #9e2033;
-    -moz-box-shadow: 0px 1px 3px #9e2033;
     box-shadow: 0px 1px 3px #9e2033;
     text-shadow: 1px 1px 1px #1c1a17;
     border: dotted #4d1d33 1.5px;
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#bd1136), to(#750f25));
-    background: -moz-linear-gradient(top, #bd1136, #750f25);
 }
 
 .button:hover {
@@ -57,20 +52,11 @@ button{
     font-optical-sizing: auto;
     font-weight: 250;
     font-style: normal;
-    color: #CCB38D;
-    font-size: 15px;
-    padding: 3px;
     text-decoration: none;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
     border-radius: 100px;
-    -webkit-box-shadow: 0px 1px 3px #9e2033;
-    -moz-box-shadow: 0px 1px 3px #9e2033;
     box-shadow: 0px 1px 3px #9e2033;
     text-shadow: 1px 1px 1px #1c1a17;
-    border: dotted #4d1d33 1.5px;
     background: -webkit-gradient(linear, 0 0, 0 100%, from(#bd1136), to(#750f25));
-    background: -moz-linear-gradient(top, #bd1136, #750f25);
 }
 
 button:hover {
@@ -119,9 +105,8 @@ button:hover {
 }
 
 .containerDropdown {
-    border: 1px solid white;
     display: flex;
-    margin: 30px auto 40px auto;
+    margin: 40px auto;
     width: 80%;
     height: 10%;
     padding: 6px;
@@ -131,72 +116,56 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    border: 1px solid greenyellow;
-    margin: 90px auto 120px auto;
+    margin: 90px 0;
 }
 
-.cardsContainer__movie{
-    position: relative;
+.cardsContainer__movie{ 
+    width: 160px;
+    height: 260px;                                
+    border-radius: 10px 10px 2px 2px;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 9px 9px 29px 1px rgba(64, 103, 229, 0.89);
+    transition: all 0.3s ease-in-out;               
+    text-align: center;
+    margin: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid red;
 }
 
-.movie__title, .movie__year, .movie__director, .movie__duration, .movie__genre, .movie__rate{
-    color: #f9f9f9;
-    font-family: "Montserrat Alternates", sans-serif;
-}
 
 .movie__title{
-    margin-bottom: 20px;
-    top: 0;
-    padding: auto;
-    border: 1px solid lightcoral;
-    font-size: medium;
-    font-weight: 600;
+    font-size: 10px;
+    font-weight: bold;
+    background: linear-gradient(to right, rgba(0,143,179,1) 0%, rgba(0,143,179,1) 37%, rgba(0,178,209,1) 62%, rgba(0,178,209,1) 94%);
+    padding: 5px;
+    border-radius: 2px;
 }
 
-.movie__year{
+p{
+    color: #f8f8ff;                                                     /* Un blanco muy suave, parecido al "ghostwhite" */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),                      /* Brillo sutil */
+                 0 0 10px rgba(255, 255, 255, 0.3);                     /* Efecto de perla */
     font-weight: 400;
-    text-align: right;
-    left:0;
-    padding: 10px;
-}
-
-.movie__director{
-    font-weight: 400;
-    text-align: right;
-    left:0;
-    padding: 10px;
-}
-
-.movie__duration{
-    font-weight: 400;
-    text-align: right;
-    left:0;
-    padding: 10px;
-}
-
-.movie__genre{
-    font-weight: 400;
-    text-align: right;
-    left:0;
-    padding: 10px;
-}
-
-.movie__rate{
-    font-weight: 400;
-    text-align: right;
-    left:0;
-    padding: 10px;
 }
 
 .movie__poster{
-    position: absolute; /* Posiciona la imagen de manera absoluta dentro de movieCard */
-    bottom: 0;          /* La imagen se alinea con la parte inferior */
-    left: 0;            /* La imagen se alinea con el costado izquierdo */
-    height: 100px;
-    width: 75px;
+    width: 45%;
+    max-width: 200px;
+    height: auto;
+}
+
+.movie_content{
+    width:fit-content;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+}
+
+.movie_details{
+    width:fit-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
 }

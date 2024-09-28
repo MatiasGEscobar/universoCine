@@ -11,6 +11,9 @@ const genreMovie = document.createElement("p");
 const rateMovie = document.createElement("p");
 const posterMovie = document.createElement("img");                                               // creo los elementos en donde iran las tarjetas
 const movieCard = document.createElement("div");                                                 // creo el elemento contenedor de cada tarjeta
+const movieCardContent = document.createElement("div");
+const movieCardDetails = document.createElement("div");
+
 
 titleMovie.classList.add("movie__title");
 yearMovie.classList.add("movie__year");
@@ -20,6 +23,8 @@ genreMovie.classList.add("movie__genre");
 rateMovie.classList.add("movie__rate");
 posterMovie.classList.add("movie__poster");
 movieCard.classList.add("cardsContainer__movie");
+movieCardContent.classList.add("movie_content");
+movieCardDetails.classList.add("movie_details");
 
 
 titleMovie.innerHTML = title;
@@ -31,25 +36,25 @@ rateMovie.innerHTML = `${rate}`;
 posterMovie.src = poster;                                                                
 posterMovie.alt = `${title} Poster`;                                                             //le asigno a cada elemento creado el valor de cada objeto
 
+
 movieCard.appendChild(titleMovie);
-movieCard.appendChild(posterMovie);
-movieCard.appendChild(genreMovie);
-movieCard.appendChild(durationMovie);
-movieCard.appendChild(yearMovie);
-movieCard.appendChild(rateMovie);
-movieCard.appendChild(directorMovie);
-
-
-
+movieCard.appendChild(movieCardContent);
+movieCard.appendChild(movieCardDetails);
+movieCardContent.appendChild(posterMovie);
+movieCardDetails.appendChild(genreMovie);
+movieCardDetails.appendChild(durationMovie);
+movieCardDetails.appendChild(yearMovie);
+movieCardDetails.appendChild(rateMovie);
+movieCardDetails.appendChild(directorMovie);
 
 return movieCard;
 }
 
 const movieContainer = document.getElementsByClassName("cardsContainer")[0];
 
-const movieCards = tempData.map(function (movie) {
-    return CreateElement(movie);                                                                // Creamos una tarjeta para cada película y las almacenamos en un array
-  });
+const movieCards = tempData.map((movie) =>
+    CreateElement(movie)                                                                        // Creamos una tarjeta para cada película y las almacenamos en un array
+  );
   
                                                                                                 // Iteramos sobre el array resultante de movieCards y añadimos cada tarjeta al contenedor
   movieCards.forEach(function (movieCard) {
