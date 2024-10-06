@@ -1,5 +1,3 @@
-const movieContainer = document.getElementsByClassName("container-fluid")[0];
-
 
 function CreateElement (movie){
 const {title, year, director, duration, genre, rate, poster} = movie;    
@@ -7,6 +5,7 @@ const {title, year, director, duration, genre, rate, poster} = movie;
 const titleMovie = document.createElement("a");                                     // creo cada elemento que contendra a cada propiedad extraida del objeto, le asigno una clase y lo defino.
 titleMovie.href = "#"; 
 titleMovie.classList.add("card-title");
+titleMovie.classList.add("p-1");
 titleMovie.innerHTML = title;
 
 const yearMovie = document.createElement("li");
@@ -47,6 +46,7 @@ movieCardUl.classList.add("list-group-flush");
 
 
 
+
 movieCard.appendChild(movieCardBody);                                                            // apendeo cada propiedad extraida del objeto a su contenedor
 movieCard.appendChild(posterMovie);                                                                         
 movieCard.appendChild(movieCardUl);
@@ -57,5 +57,7 @@ movieCardUl.appendChild(yearMovie);
 movieCardUl.appendChild(rateMovie);
 movieCardUl.appendChild(directorMovie);
 
-movieContainer.appendChild(movieCard);         
+
+
+return movieCard;
 }
