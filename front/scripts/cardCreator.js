@@ -60,4 +60,6 @@ movieCardUl.appendChild(directorMovie);
 
 
 return movieCard;
-}
+};
+
+module.exports = CreateElement;

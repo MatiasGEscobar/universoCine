@@ -1,4 +1,6 @@
 const movieContainer = document.getElementsByClassName("container-fluid")[0];
+const tempData = require("./tempData");
+const CreateElement = require("./cardCreator");
 
 
 $.get("https://students-api.up.railway.app/movies")
