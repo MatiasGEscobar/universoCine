@@ -1,10 +1,3 @@
-class producto{
-    constructor(nombre, precio){
-        this.nombre = nombre;
-        this.precio = precio;
-    }
-}
- 
 class CarritoCompra {
     constructor(){
         this.carrito = [];
@@ -27,4 +20,4 @@ class CarritoCompra {
     }
 };
 
-module.exports = {CarritoCompra, producto};
+module.exports = {CarritoCompra};
