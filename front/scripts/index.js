@@ -1,16 +1,22 @@
 const movieContainer = document.getElementsByClassName("container-fluid")[0];
 const tempData = require("./tempData");
 const CreateElement = require("./cardCreator");
+const axios = require ("axios");
 
 
-$.get("https://students-api.up.railway.app/movies")
-.done((data,status) => {
-    const arrayHtmlCard = data.map(CreateElement);
+const fetchMovies = async() => {
+  try{
+    const data = await axios.get("https://students-api.up.railway.app/movies");
+    const arrayHtmlCard = data.data.map(CreateElement);
     arrayHtmlCard.forEach((movie) => movieContainer.appendChild(movie));
-  })
-.fail((error) => {
-  alert("excepción en cargar los archivos desde la API, se utilizan los datos guardados");
-  const arrayHtmlCard = tempData.map(CreateElement);
+  }catch (err){
+    alert("excepción en cargar los archivos desde la API, se utilizan los datos guardados");
+    const arrayHtmlCard = tempData.map(CreateElement);
     arrayHtmlCard.forEach((movie) => movieContainer.appendChild(movie));
-})
+  }
+}
+
+fetchMovies();
+
+
  
