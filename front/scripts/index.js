@@ -1,7 +1,9 @@
+
 const movieContainer = document.getElementsByClassName("container-fluid")[0];
 const tempData = require("./tempData");
 const CreateElement = require("./cardCreator");
 const axios = require ("axios");
+
 
 
 const fetchMovies = async() => {
