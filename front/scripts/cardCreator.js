@@ -1,5 +1,5 @@
 
-function CreateElement (movie){
+function createElement (movie){
 const {title, year, director, duration, genre, rate, poster} = movie;    
 
 const titleMovie = document.createElement("a");                                     // creo cada elemento que contendra a cada propiedad extraida del objeto, le asigno una clase y lo defino.
@@ -62,4 +62,4 @@ movieCardUl.appendChild(directorMovie);
 return movieCard;
 };
 
-module.exports = CreateElement;
+module.exports = {createElement};

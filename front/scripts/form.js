@@ -1,3 +1,7 @@
+const axios = require("axios");
+
+
+const formJs = () => {
 // Esperar a que el documento esté listo
 $(document).ready(function() {
     // Referencias a elementos del formulario
@@ -93,7 +97,13 @@ $(document).ready(function() {
         alert('Formulario válido! Los datos se han enviado correctamente.');
         
         // Aquí iría el código para enviar los datos al servidor
-        return true;
+        axios.post("http://localhost:3000/movies", formData)
+        .then(function (response) {
+        console.log(response);
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
     }
 
     // Función para limpiar el formulario
@@ -133,7 +143,13 @@ $(document).ready(function() {
         }
     }
 
+    
     // Event Listeners
     form.addEventListener('submit', validateForm);
     clearButton.addEventListener('click', clearForm);
 });
+
+}
+
+Module.exports = {formJs};
+

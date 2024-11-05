@@ -1,3 +1,5 @@
+const active = () => {
+
 const lista = document.getElementById("list");
 
 const paginas = ["Página 1", "Página 2", "Página 3", "Página 4", "Página 5"]
@@ -18,3 +20,6 @@ paginas.forEach((pagina) => {
 
     lista.appendChild(li);
 })
+}
+
+Module.exports = {active};
