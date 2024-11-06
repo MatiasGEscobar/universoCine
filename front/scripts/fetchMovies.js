@@ -5,7 +5,7 @@ const tempData = require("./tempData");
 
 const fetchMovies = async() => {
     try{
-      const {data} = await axios.get("http://localhost:3000/movies/");
+      const {data} = await axios.get("http://localhost:3000/movies");
       const arrayHtmlCard = data.data.map(createElement);
       console.log(arrayHtmlCard);
       arrayHtmlCard.forEach((movie) => movieContainer.appendChild(movie));
