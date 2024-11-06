@@ -5,14 +5,15 @@ const tempData = require("./tempData");
 
 const fetchMovies = async() => {
     try{
-      const {data} = await axios.get("http://localhost:3000/movies");
+      const {data} = await axios.get("http://localhost:3000/movies/");
       const arrayHtmlCard = data.data.map(createElement);
+      console.log(arrayHtmlCard);
       arrayHtmlCard.forEach((movie) => movieContainer.appendChild(movie));
-    }catch (err){
+    }catch (error){
       alert("excepción en cargar los archivos desde la API, se utilizan los datos guardados");
-      const arrayHtmlCard = tempData.map(createElement);
-      arrayHtmlCard.forEach((movie) => movieContainer.appendChild(movie));
+      const arrayHtmlCardfalse = tempData.map(createElement);
+      arrayHtmlCardfalse.forEach((movie) => movieContainer.appendChild(movie));
     }
   }
 
-  Module.exports = {fetchMovies};
+  module.exports = fetchMovies;

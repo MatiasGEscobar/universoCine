@@ -11,6 +11,4 @@ const validationMoviesData = (req,res,next) => {
     next();
 }
 
-module.exports = {
-    validationMoviesData
-}
+module.exports = validationMoviesData;

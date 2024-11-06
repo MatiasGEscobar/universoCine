@@ -22,4 +22,4 @@ paginas.forEach((pagina) => {
 })
 }
 
-Module.exports = {active};
+module.exports = active;

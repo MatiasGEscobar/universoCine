@@ -62,4 +62,4 @@ movieCardUl.appendChild(directorMovie);
 return movieCard;
 };
 
-module.exports = {createElement};
+module.exports = createElement;

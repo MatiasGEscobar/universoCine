@@ -1,5 +1,5 @@
-const {connectDB} = require ("./src/config/dbConfig");
-const {app} = require ("./src/server");
+const connectDB = require ("./src/config/dbConfig.js");
+const app = require ("./src/server.js");
 
 const serverOn = async () => {
     try {
@@ -9,7 +9,7 @@ const serverOn = async () => {
             console.log("servidor escuchando en el puerto 3000");
         })
     } catch (error) {
-    console.log(error);
+        console.log(error);
 }
 }
 

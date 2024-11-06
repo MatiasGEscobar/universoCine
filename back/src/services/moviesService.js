@@ -1,4 +1,4 @@
-const { Movie } = require("../models/Movie");
+const Movie = require("../models/Movie");
 
 const getMoviesService = async() => {
    return await Movie.find();

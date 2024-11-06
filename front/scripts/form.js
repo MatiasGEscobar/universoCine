@@ -1,6 +1,5 @@
 const axios = require("axios");
 
-
 const formJs = () => {
 // Esperar a que el documento esté listo
 $(document).ready(function() {
@@ -151,5 +150,5 @@ $(document).ready(function() {
 
 }
 
-Module.exports = {formJs};
+module.exports = formJs;
 
