@@ -4,8 +4,9 @@ const getMoviesService = async() => {
    return await movie.find();
 }
   
-const createMoviesService = async (movie) => {
-    return await movie.create(movie);
+const createMoviesService = async (newMovie) => {
+    const creation = await movie.create(newMovie);
+    return creation;
   }
   
   module.exports = {
